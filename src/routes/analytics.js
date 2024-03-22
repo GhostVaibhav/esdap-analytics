@@ -32,3 +32,9 @@ router.post("/student", async (req, res) => {
 	// Send response
 	res.json({ finalScore });
 });
+
+router.get("/test", (req, res) => {
+	res.json({ message: "Hello, World!" });
+});
+
+module.exports = router;
