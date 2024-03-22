@@ -5,7 +5,7 @@ function generateStudentPerformanceScore(
 	attendancePercentage,
 	extracurricularActivities,
 	basicFitnessScores,
-	teamworkSkills,
+	teamworkSkillScores,
 	recommendationLetters,
 	researchExperience
 ) {
@@ -30,7 +30,7 @@ function generateStudentPerformanceScore(
 		Object.values(extracurricularActivities)
 	);
 	const normalizedBasicFitnessScores = normalizeData(basicFitnessScores);
-	const normalizedTeamworkSkills = normalizeData(teamworkSkills);
+	const normalizedTeamworkSkillScores = normalizeData(teamworkSkillScores);
 	const normalizedRecommendationLetters = [recommendationLetters / 10]; // Normalize to range [0, 1]
 	const normalizedResearchExperience = [researchExperience / 10]; // Normalize to range [0, 1]
 
@@ -40,7 +40,7 @@ function generateStudentPerformanceScore(
 		attendance: 0.1,
 		extracurricularActivities: 0.1,
 		basicFitnessScores: 0.1,
-		teamworkSkills: 0.1,
+		teamworkSkillScores: 0.1,
 		recommendationLetters: 0.1,
 		researchExperience: 0.1,
 	};
@@ -70,7 +70,7 @@ function generateStudentPerformanceScore(
 			attendance: normalizedAttendance,
 			extracurricularActivities: normalizedExtracurricularActivities,
 			basicFitnessScores: normalizedBasicFitnessScores,
-			teamworkSkills: normalizedTeamworkSkills,
+			teamworkSkillScores: normalizedTeamworkSkillScores,
 			recommendationLetters: normalizedRecommendationLetters,
 			researchExperience: normalizedResearchExperience,
 		},
@@ -104,7 +104,7 @@ let academicScores = [100, 100, 100, 100, 100];
 let attendancePercentage = 100;
 let extracurricularActivities = { Sports: 10, "Debate Club": 10, Music: 10 };
 let basicFitnessScores = [100, 100, 100, 100, 100];
-let teamworkSkills = [10, 10, 10, 10, 10];
+let teamworkSkillScores = [10, 10, 10, 10, 10];
 let recommendationLetters = 10; // Out of 10
 let researchExperience = 10; // Out of 10
 
@@ -113,7 +113,7 @@ let { finalScore, grade } = generateStudentPerformanceScore(
 	attendancePercentage,
 	extracurricularActivities,
 	basicFitnessScores,
-	teamworkSkills,
+	teamworkSkillScores,
 	recommendationLetters,
 	researchExperience
 );

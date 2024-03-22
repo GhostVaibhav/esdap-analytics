@@ -9,7 +9,7 @@ app.use(cors());
 app.use(express.json());
 
 // route all the requests to /api/v1 to a apiRouter
-app.use("/api/v1", rootRouter);
+app.use("/api", rootRouter);
 
 app.listen(PORT, () => {
 	console.log(`Server started on ${PORT}`);
