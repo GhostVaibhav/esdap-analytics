@@ -17,7 +17,8 @@ function generateStudentPerformanceScore(
 		const min = Math.min(...data);
 		const max = Math.max(...data);
 		if (min === max) {
-			return data.map(() => 1); // Return an array of ones (all values are the same)
+			return data.map(() => 1);
+			// Return an array of ones (all values are the same)
 		}
 		return data.map((value) => (value - min) / (max - min));
 	};
