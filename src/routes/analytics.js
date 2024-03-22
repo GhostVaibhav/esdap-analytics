@@ -29,3 +29,9 @@ router.post("/student-performance", (req, res) => {
 	// Send response
 	res.json({ finalScore, grade });
 });
+
+router.get("/test", (req, res) => {
+	res.json({ message: "Hello, World!" });
+});
+
+module.exports = router;
