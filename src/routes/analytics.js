@@ -1,7 +1,9 @@
 const express = require("express");
 
 const router = express.Router();
-const generateStudentPerformanceScore = require("../controllers/analyticLogic");
+const {
+	generateStudentPerformanceScore,
+} = require("../controllers/analyticLogic");
 
 // /api/V1/analytics/test
 router.post("/test", (req, res) => {

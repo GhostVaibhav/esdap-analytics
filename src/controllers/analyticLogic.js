@@ -149,7 +149,7 @@ const generateStudentPerformanceScore = async (
 	evaluator.add(weightedScore567, weightedScore2, weightedScore5672);
 
 	let cipherScore1 = seal.CipherText();
-	cipherScore1 = weightedScore134;	
+	cipherScore1 = weightedScore134;
 
 	let cipherScore2 = seal.CipherText();
 	cipherScore2 = weightedScore5672;

@@ -8,4 +8,5 @@ const router = express.Router();
 // /api/v1/analytics
 router.use("/analytics", analyseRouter);
 
+
 module.exports = router;
