@@ -3,15 +3,14 @@ const express = require("express");
 const router = express.Router();
 const generateStudentPerformanceScore = require("../controllers/analyticLogic");
 
-// /api/analytics/test
-router.get("/test", (req, res) => {
+// /api/V1/analytics/test
+router.post("/test", (req, res) => {
 	res.json({ message: "Hello, World!" });
 });
 
-// /api/analytics/student=performance
-router.get("/student-performance", async (req, res) => {
+// /api/V1/analytics/student-performance
+router.post("/student-performance", async (req, res) => {
 	try {
-		// Extract data from request body
 		const {
 			context,
 			Galois_key_Keypair_A_,
