@@ -9,6 +9,7 @@ const generateStudentPerformanceScore = async (
 	Cipher_recommendationLetters,
 	Cipher_researchExperience
 ) => {
+	
 	const SEAL = require("node-seal");
 	const seal = await SEAL();
 	const schemeType = seal.SchemeType.ckks;
@@ -18,7 +19,7 @@ const generateStudentPerformanceScore = async (
 
 	// Encoder
 	const _encoder = (array, Plain_A) => {
-		ckksEncoder.encode(Float64Array.from(array), Math.pow(2, 32), Plain_A);
+		ckksEncoder.encode(Float64Array.from(array), Math.pow(2, 16), Plain_A);
 	};
 
 	// 1  - Mean Calculation (academivScores)  - weightage - 0.4
@@ -153,6 +154,8 @@ const generateStudentPerformanceScore = async (
 
 	let cipherScore2 = seal.CipherText();
 	cipherScore2 = weightedScore5672;
+
+	console.log(cipherScore1, cipherScore2);
 
 	return { cipherScore1, cipherScore2 };
 };
